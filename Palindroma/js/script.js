@@ -76,12 +76,12 @@ function isPalindromeAlternative (WordToCheck) {
         WordToCheck[i] += thisWordBackwards;
     }
 
-    // Verify the condition between the strings
+    // Verify if palindrome
     if (thisWordBackwards === WordToCheck) {
         palindromeFound = true; 
     } 
 
-    // Returns a Boolean value based on the condition check
+    // Returns a boolean based on the condition check
     return palindromeFound;
 }
 
