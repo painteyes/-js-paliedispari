@@ -23,22 +23,26 @@ function isPalindrome (WordToCheck) {
     // Default flag variable
     let palindromeFound = false;
 
-    // Arrays that will contain the letters of the word forward and backward
+    // Arrays that will contain the letters of the same word both forward and backward
     let thisWord = [];
     let thisWordBackwards = [];
 
+    // Push the letters of the word forward into the array
     for (let i = 0; i < WordToCheck.length; i++) {
         thisWord.push(WordToCheck[i]);
     }
 
+    // Push the letters of the word backwards into the array
     for (let i = WordToCheck.length - 1; i >= 0; i--) {
         thisWordBackwards.push(WordToCheck[i]);
     }
     
+    // Verify the condition between the strings
     if (thisWordBackwards.toString() === thisWord.toString()) {
         palindromeFound = true; 
     } 
 
+    // Returns a Boolean value based on the condition check
     return palindromeFound;
 }
 
@@ -63,22 +67,21 @@ function isPalindromeAlternative (WordToCheck) {
     // Default flag variable
     let palindromeFound = false;
 
-    // Arrays that will contain the letters of the word forward and backward
+    // Strings that will contain the same word forward and backward
     let thisWord = '';
     let thisWordBackwards = '';
-
-    for (let i = 0; i < WordToCheck.length; i++) {
-        WordToCheck[i] += thisWord;
-    }
-
+    
+    // Turn the word backwards
     for (let i = WordToCheck.length - 1; i >= 0; i--) {
         WordToCheck[i] += thisWordBackwards;
     }
 
-    if (thisWordBackwards === thisWord) {
+    // Verify the condition between the strings
+    if (thisWordBackwards === WordToCheck) {
         palindromeFound = true; 
     } 
 
+    // Returns a Boolean value based on the condition check
     return palindromeFound;
 }
 
