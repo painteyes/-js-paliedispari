@@ -24,13 +24,11 @@ function isPalindrome (WordToCheck) {
     let thisWord = [];
     let thisWordBackwards = [];
 
-    for (let i = 0; i < userWord.length; i++) {
+    for (let i = 0; i < WordToCheck.length; i++) {
         thisWord.push(userWord[i]);
     }
 
-    console.log(thisWord);
-
-    for (let i = userWord.length - 1; i = 0; i--) {
+    for (let i = WordToCheck.length - 1; i = 0; i--) {
         thisWordBackwards.push(userWord[i]);
     }
 
